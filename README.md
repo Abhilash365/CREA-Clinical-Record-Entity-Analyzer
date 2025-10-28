@@ -62,7 +62,7 @@ The model was trained on the **BC5CDR dataset**, a collection of 1500 PubMed abs
 ### 3.2. The Model: Why BioBERT?
 A standard `BERT` model is trained on Wikipedia and books. It has no knowledge of medical jargon. Using it would be like asking a literature major to read a medical chart.
 
-Instead, this project uses **`dmis-lab/biobert-base-cased-v1.1`**. This is a BERT model that was pre-trained from scratch on **millions of PubMed abstracts**. It's a *domain expert* that already understands the language of medicine, which is why it can achieve such high accuracy. We then **fine-tuned** this expert model on our specific task.
+Instead, this project uses **`dmis-lab/biobert-base-cased-v1.1`**. This is a BERT model that was pre-trained from scratch on **millions of PubMed abstracts**. It's a *domain expert* that already understands the language of medicine, which is why it can achieve such high accuracy. We then **fine-tuned** this expert model on this specific task.
 
 ### 3.3. The "Gotcha": Aligning Sub-word Tokens
 The hardest part of NER with transformers is the tokenizer. A tokenizer splits words into "sub-words."
